@@ -2,6 +2,8 @@ import { ScrollView, StatusBar, StyleSheet, TextInput, View, Text, TouchableOpac
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as Icon from "react-native-feather";
 import Categories from "../components/Categories";
+import FeaturedRow from "@/components/FeaturedRow";
+import { featured } from "@/constants/data";
 
 export default function Index() {
   return (
@@ -45,8 +47,25 @@ export default function Index() {
       >
         {/* Categories */}
         <Categories />
+
+        { /* featured */}
+        <View>
+          {
+            [featured, featured, featured].map((item, index) => {
+              return (
+                <FeaturedRow
+                  key={index}
+                  title={item.title}
+                  restaurants={item.restaurants}
+                  description={item.description}
+                />
+
+              )
+            })
+          }
+        </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaView >
   );
 }
 

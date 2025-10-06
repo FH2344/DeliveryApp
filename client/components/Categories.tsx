@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#e5e5e5', // light gray
     },
     categoryButtonActive: {
-        backgroundColor: '#4b5563', // darker gray when active
+        backgroundColor: '#32a3ffff', // darker gray when active
     },
     categoryImage: {
         width: 45,
