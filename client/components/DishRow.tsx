@@ -30,13 +30,13 @@ export default function DishRow({ item }: Props) {
                     <Text style={styles.price}>{item.price} BD</Text>
 
                     <View style={styles.counter}>
-                        <TouchableOpacity style={[styles.counterButton, { backgroundColor: themeColors.bgColor(1) }]}>
+                        <TouchableOpacity style={[styles.counterButton, { backgroundColor: themeColors.primary }]}>
                             <Icon.Minus strokeWidth={2} height={20} width={20} stroke="white" />
                         </TouchableOpacity>
 
                         <Text style={styles.count}>2</Text>
 
-                        <TouchableOpacity style={[styles.counterButton, { backgroundColor: themeColors.bgColor(1) }]}>
+                        <TouchableOpacity style={[styles.counterButton, { backgroundColor: themeColors.primary }]}>
                             <Icon.Plus strokeWidth={2} height={20} width={20} stroke="white" />
                         </TouchableOpacity>
                     </View>
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         padding: 12,
         borderRadius: 24,
-        shadowColor: '#000',
+        shadowColor: themeColors.primary,
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.1,
         shadowRadius: 6,

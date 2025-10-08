@@ -5,7 +5,7 @@ import themeColors from '@/theme'
 export default function CartIcon() {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={[styles.cartButton, { backgroundColor: themeColors.bgColor(1) }]}>
+            <TouchableOpacity style={[styles.cartButton, { backgroundColor: themeColors.primary }]}>
 
                 <View style={styles.countContainer}>
                     <Text style={styles.countText}>3</Text>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         paddingVertical: 4,
         paddingHorizontal: 16,
         borderRadius: 9999,
-        backgroundColor: 'rgba(255,255,255,0.5)',
+        backgroundColor: 'rgba(255, 255, 255, 0.38)',
     },
     countText: {
         fontWeight: '800',

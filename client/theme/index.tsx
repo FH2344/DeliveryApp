@@ -1,7 +1,7 @@
 // themeColors.ts
 const themeColors = {
     // Primary colors
-    primary: '#4CAF50',       // example green
+    primary: '#32a3ffff',       // example green
     secondary: '#FFC107',     // example amber
     accent: '#FF5722',        // example orange
     bgColor: (opacity = 1) => `rgba(0,0,0,${opacity})`, // black with opacity
