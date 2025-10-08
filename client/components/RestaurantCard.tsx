@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-n
 import React from 'react'
 import * as Icon from 'react-native-feather'
 import themeColors from '@/theme';
+import { useRouter } from 'expo-router';
 
 // Define type for a restaurant
 type Restaurant = {
@@ -21,8 +22,14 @@ type Props = {
 };
 
 export default function RestaurantCard({ item }: Props) {
+    const router = useRouter();
     return (
-        <TouchableWithoutFeedback>
+        <TouchableWithoutFeedback
+            onPress={() => router.push({
+                pathname: '/RestaurantScreen',
+                params: { id: item.id.toString() }
+            })}
+        >
             <View style={[styles.card, { shadowColor: themeColors.bgColor(0.2) }]}>
                 <Image source={item.image} style={styles.image} />
                 <View style={styles.content}>
